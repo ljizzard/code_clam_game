@@ -10,7 +10,10 @@ export default {
   props: ['creatures'],
   methods: {
     handleClick(){
+<<<<<<< HEAD
 
+=======
+>>>>>>> c74a52254b554559e41da7e610300897a3974c8e
     }
   }
 }
