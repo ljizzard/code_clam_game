@@ -15,7 +15,7 @@ db.creatures.insertMany([
   {
     name: "Turtle",
     image: null,
-    fact: "Some turtles can hide their head inside their hard shell"
+    fact: "Sea turtles can live for as long as 80 years"
   }
   {
     name: "Octopus",
