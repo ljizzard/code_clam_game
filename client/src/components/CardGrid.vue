@@ -1,7 +1,7 @@
 <template lang="html">
-  <div id="card-grid" v-if="creatures">
+  <div id="card-grid">
     <ul>
-      <CardGridItem v-for="(creature, index) in creatures" :key="index" :creature="creature"
+      <CardGridItem />
     </ul>
   </div>
 </template>
@@ -20,6 +20,8 @@ export default {
 
 <style lang="css" scoped>
 #card-grid {
+  background-color: grey;
+  margin: auto;
   width: 750px;
   height: 750px;
   border: 2px solid black;

@@ -1,5 +1,5 @@
 <template lang="html">
-  <li v-on:click="handleClick">{{ creature.image }}</li>
+  <div id="card">Image Here</div>
 </template>
 
 <script>
@@ -16,4 +16,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+#card {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+}
 </style>
