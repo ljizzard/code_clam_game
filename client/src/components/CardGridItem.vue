@@ -10,7 +10,7 @@ export default {
   props: ['creatures'],
   methods: {
     handleClick(){
-      
+
     }
   }
 }
