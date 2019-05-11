@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="app">
+  <div id="header">
   </div>
 </template>
 
@@ -7,13 +7,13 @@
 import Header from '@/components/Header'
 
 export default {
-  name: 'app',
-  components: {
-    Header,
-    CardGrid
-  }
+  name: 'app'
 }
 </script>
 
 <style lang="css" scoped>
+#header {
+  border: 3px solid black;
+  height: 50px;
+}
 </style>
