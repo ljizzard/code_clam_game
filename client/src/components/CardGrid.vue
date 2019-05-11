@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="card-grid" v-if="creatures">
     <ul>
-      <CardGridItem v-for="(creature, index) in creatures" :key="index" :creature='creature'
+      <CardGridItem v-for="(creature, index) in creatures" :key="index" :creature="creature"
     </ul>
   </div>
 </template>
