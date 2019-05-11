@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CardGrid :creatures="creatures" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CardGrid from './components/CardGrid'
+import { eventBus } from './main'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    CardGrid,
+    Header
+  },
+  mounted(){
+    this.fetchData();
+    eventBus.$on('refresh-data', this.fetchData)
+  },
+  methods: {
+    fetchData(){
+
+    }
   }
+
+
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
