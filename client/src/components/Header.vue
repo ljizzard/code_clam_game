@@ -7,7 +7,7 @@
 import Header from '@/components/Header'
 
 export default {
-  name: 'app'
+  name: 'header'
 }
 </script>
 
