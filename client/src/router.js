@@ -8,8 +8,8 @@ Vue.use(Router);
 export const router = new Router({
   routes: [
     {
-      path:'',
-      name: 'home',
+      path: '/',
+      name: 'homeview',
       component: HomeView
     },
     {
