@@ -8,6 +8,7 @@
 <script>
 import Header from '@/components/Header';
 import CardGrid from '@/components/CardGrid';
+import CardGridItem from '@/components/CardGridItem';
 
 export default {
   name: 'game-vue'
