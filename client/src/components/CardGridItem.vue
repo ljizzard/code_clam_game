@@ -7,15 +7,11 @@ import {eventBus} from '@/main.js';
 
 export default {
   name: 'grid-item',
-  props: ['creatures'],
+  props: ['cards'],
   methods: {
     handleClick(){
     }
-  }
-}
-
-Vue.component('creatures', {
-  template: html,
+  },
 
   data() {
     return {
@@ -27,7 +23,7 @@ Vue.component('creatures', {
   },
 
   props: {
-    creatures: {
+    cards: {
       type: Array,
       required: true
     },
@@ -44,20 +40,20 @@ Vue.component('creatures', {
   },
 
   methods: {
-    populateBoard( {
+    populateBoard() {
 
-      for(let i = 0; i <= ((this.matchingOptions.length*2)-1); i++)
-      this.creatures.push({id:1, showFace: false, matched: false, face: this.getRandomElement()})
+      for (let i = 0; i <= ((this.matchingOptions.length*2)-1); i++) {
+      this.cards.push({id:1, showFace: false, matched: false, face: this.getRandomElement() })
       }
 
-      return this.creatures
+      return this.cards
     },
 
 
       getRandomElement() {
         let pairs = this.matchingOptions.filter(object => object.pairs >=1)
         pairs = this.shuffleArray(pairs)
-        let item = pairs[Math.floor.random() * pairs.length)]
+        let item = pairs[Math.floor.random() * pairs.length]
         this.itemToDecrement(item)
 
         return item
@@ -74,17 +70,17 @@ Vue.component('creatures', {
         return this.matchingOptions[decrementItem.pairs-=1]
       },
 
-      handleClick(creature) {
-        if(creature.matched === true || !this.veryfyNonDuplicateGuess(creature)) {return}
-        this.$emit("compare-matches", creature)
+      handleClick(card) {
+        if(card.matched === true || !this.veryfyNonDuplicateGuess(card)) {return}
+        this.$emit("compare-matches", card)
       },
 
-      verifyNonDuplicateCGuess(creature) {
-        if(this.guesses.length === 1 && this.guesses [0].id ===creature.id){return false}
+      verifyNonDuplicateCGuess(card) {
+        if(this.guesses.length === 1 && this.guesses [0].id ===card.id){return false}
         return true
       },
       watch: {
-        creatures: function (value){
+        cards: function (value){
           if (value.length == 0) {
             this.populateBoard();
           }
@@ -92,7 +88,8 @@ Vue.component('creatures', {
       }
 
 
-    })
+    }
+  }
 
 </script>
 
