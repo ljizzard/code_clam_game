@@ -46,7 +46,7 @@ Vue.component('creatures', {
   methods: {
     populateBoard( {
 
-      for (let i = 0; i <=((this.matchingOptions.length*2)-1); i++)
+      for(let i = 0; i <= ((this.matchingOptions.length*2)-1); i++)
       this.creatures.push({id:1, showFace: false, matched: false, face: this.getRandomElement()})
       }
 
