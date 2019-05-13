@@ -11,7 +11,25 @@ import CardGrid from '@/components/CardGrid';
 import CardGridItem from '@/components/CardGridItem';
 
 export default {
-  name: 'game-vue'
+  name: 'game-vue',
+    data() {
+      return {
+      firstGuess: '',
+      secondGuess: '',
+      count: 0,
+      previousTarget: null,
+      delay: 1200;
+    }
+  },
+  methods() {
+    resetGuesses = () => {
+      firstGuess = '';
+      secondGuess = '';
+      count = 0;
+      previousTarget = null;
+    }
+  }
+
 }
 </script>
 

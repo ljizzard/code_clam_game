@@ -1,13 +1,18 @@
 <template lang="html">
-  <div id="card">Image Here</div>
+  <div v-for="creature in creatures" :key="creature">
+    <div class="card" dataset.name="name" ></div>
+    <div class="front"></div>
+    <div class="back"></div>
+  </div>
 </template>
 
 <script>
 import {eventBus} from '@/main.js';
+import CardGrid from '@/components/CardGrid';
 
 export default {
   name: 'grid-item',
-  props: ['cards'],
+  props: ['creature'],
   methods: {
     handleClick(){
     }
