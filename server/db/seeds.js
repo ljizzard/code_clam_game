@@ -4,7 +4,7 @@ db.dropDatabase();
 db.creatures.insertMany([
   {
     name: "Fish",
-    image: '@/assets/fish.png'
+    image: '@/assets/fish.png',
     fact: "A group of fish is called a school"
   }
   {
