@@ -26,8 +26,8 @@ export default {
       level: 1
     }
   },
-  methods: {
-    const gameGrid = creatures
+  methods:{
+   const gameGrid = creatures
      .concat(creatures)
      .sort (() => 0.5 - Math.random());
 
