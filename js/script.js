@@ -91,12 +91,26 @@ const match = () => {
         width: 600,
         padding: '3em',
         background: '#fff',
-        backdrop: 'rgba(0,0,123,0.4)'
-      })
+        backdrop: 'rgba(0,0,123,0.4)',
+        timer: 3500
+        })
+        setTimeout(function() {
+          //reload page after 5 seconds
+          location.reload();
+        }, 3500);
     }
 
   });
 };
+
+// const randomFact = () => {
+//   let facts = creatures.map((creature) => {
+//     creature.fact
+//   })
+//     var response = facts[ parseInt( Math.random() * facts.length ) ];
+//
+// }
+//
 
 const resetGuesses = () => {
   firstGuess = '';
