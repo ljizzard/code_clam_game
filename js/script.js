@@ -1,34 +1,42 @@
 const creatures = [{
   'name': 'octopus',
-  'img': 'img/octopus.png'
+  'img': 'img/octopus.png',
+  'fact': "An octopus has 8 long limbs called tentacles."
 },
 {
   'name': 'crab',
-  'img': 'img/crab.png'
+  'img': 'img/crab.png',
+  'fact': "Crabs can talk to each other by waving their pincers."
 },
 {
   'name': 'fish',
-  'img': 'img/fish.png'
+  'img': 'img/fish.png',
+  'fact': "A group of fish is called a school."
 },
 {
   'name': 'jellyfish',
-  'img': 'img/jellyfish.png'
+  'img': 'img/jellyfish.png',
+  'fact': "Jellyfish were around before the Dinosaurs."
 },
 {
   'name': 'turtle',
-  'img': 'img/turtle.png'
+  'img': 'img/turtle.png',
+  'fact': "A turtle can live for more than 80 years"
 },
 {
   'name': 'seahorse',
-  'img': 'img/seahorse.png'
+  'img': 'img/seahorse.png',
+  'fact': "Seahorses like to swim in pairs and link their tails."
 },
 {
   'name': 'starfish',
-  'img': 'img/starfish.png'
+  'img': 'img/starfish.png',
+  'fact': "Starfish have no brain and no blood."
 },
 {
   'name': 'whale',
-  'img': 'img/whale.png'
+  'img': 'img/whale.png',
+  'fact': "A baby whale is called a calf."
 }
 ];
 
