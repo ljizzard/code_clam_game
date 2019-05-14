@@ -67,13 +67,27 @@ gameGrid.forEach(item => {
   card.appendChild(back);
 });
 
+// const winbox = () => {
+//   alert("You did it!!!")
+// }
+
 const match = () => {
   const selected =
   document.querySelectorAll('.selected');
   selected.forEach(card => {
     card.classList.add('match');
     matchedpairs += 1;
-    console.log(matchedpairs);
+    if (matchedpairs == 16) {
+      Swal.fire({
+        title: 'WOOHOO!!! You did it!!!',
+        width: 600,
+        padding: '3em',
+        background: '#fff',
+        backdrop: 'rgba(0,0,123,0.4)',
+        onAfterClose: ''
+      })
+    }
+
   });
 };
 
@@ -124,5 +138,7 @@ grid.addEventListener('click', event => {
     }
     previousTarget = clicked;
   }
+
+
 
 });
