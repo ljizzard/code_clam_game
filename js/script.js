@@ -41,6 +41,7 @@ let secondGuess = '';
 let count = 0;
 let previousTarget = null;
 let delay = 1200;
+let matchedpairs = 0;
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -71,6 +72,8 @@ const match = () => {
   document.querySelectorAll('.selected');
   selected.forEach(card => {
     card.classList.add('match');
+    matchedpairs += 1;
+    console.log(matchedpairs);
   });
 };
 
