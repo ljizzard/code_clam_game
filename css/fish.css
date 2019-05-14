@@ -109,3 +109,17 @@ p {
 .match .front {
   background: rgba(101, 137, 249, 0) !important;
 }
+
+
+
+#fact {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 530px;
+  padding: 20px;
+  font-family: 'NTR', sans-serif;
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  /* border: 2px solid black; */
+}

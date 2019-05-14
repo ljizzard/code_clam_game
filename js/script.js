@@ -40,6 +40,9 @@ const creatures = [{
 }
 ];
 
+const randomFact = creatures[Math.floor(Math.random() * 7) +1].fact;
+document.getElementById("randomFact").innerHTML = randomFact;
+
 const gameGrid = creatures
   .concat(creatures)
   .sort (() => 0.5 - Math.random());
@@ -75,10 +78,6 @@ gameGrid.forEach(item => {
   card.appendChild(back);
 });
 
-// const winbox = () => {
-//   alert("You did it!!!")
-// }
-
 const match = () => {
   const selected =
   document.querySelectorAll('.selected');
@@ -87,30 +86,22 @@ const match = () => {
     matchedpairs += 1;
     if (matchedpairs == 16) {
       Swal.fire({
-        title: 'WOOHOO!!! You did it!!!',
+        title: 'WOOHOO!!!',
+        text: 'You did it! You caught them all!',
         width: 600,
         padding: '3em',
         background: '#fff',
         backdrop: 'rgba(0,0,123,0.4)',
-        timer: 3500
+        timer: 4500
         })
         setTimeout(function() {
-          //reload page after 5 seconds
           location.reload();
-        }, 3500);
+        }, 4500);
     }
 
   });
 };
 
-// const randomFact = () => {
-//   let facts = creatures.map((creature) => {
-//     creature.fact
-//   })
-//     var response = facts[ parseInt( Math.random() * facts.length ) ];
-//
-// }
-//
 
 const resetGuesses = () => {
   firstGuess = '';
