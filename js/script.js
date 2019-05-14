@@ -83,8 +83,7 @@ const match = () => {
         width: 600,
         padding: '3em',
         background: '#fff',
-        backdrop: 'rgba(0,0,123,0.4)',
-        onAfterClose: ''
+        backdrop: 'rgba(0,0,123,0.4)'
       })
     }
 
