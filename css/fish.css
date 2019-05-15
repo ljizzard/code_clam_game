@@ -60,7 +60,7 @@ audio {
 .grid {
   max-width: 670px;
   float: right;
-  margin: 20px 100px 0 0;
+  margin: 20px 90px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,7 +123,7 @@ audio {
 
 #fact {
   margin-top: 20px;
-  margin-left: 200px;
+  margin-left: 210px;
   width: 350px;
   padding: 20px;
   font-family: 'NTR', sans-serif;
@@ -131,4 +131,11 @@ audio {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   /* border: 2px solid black; */
+}
+
+#audio {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.5;
 }
