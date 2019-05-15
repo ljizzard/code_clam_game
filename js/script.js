@@ -42,10 +42,12 @@ const creatures = [{
 // random fact generator
 const randomFact = creatures[Math.floor(Math.random() * 7) +1].fact;
 document.getElementById("randomFact").innerHTML = randomFact;
+
 // duplicates array and saves it as gameGrid
 const gameGrid = creatures
   .concat(creatures)
-  .sort (() => 0.5 - Math.random());
+  .sort (() => 0.5 - Math.random()); // randomly sorts array gameGrid
+
 // set up initials
 let firstGuess = '';
 let secondGuess = '';
@@ -54,35 +56,36 @@ let previousTarget = null;
 let delay = 1200;
 let matchedpairs = 0;
 
-const game = document.getElementById('game');
-const grid = document.createElement('section');
+const game = document.getElementById('game'); // get div with id of game
+const grid = document.createElement('section'); // create section with class of grid
 grid.setAttribute('class', 'grid');
-game.appendChild(grid);
+game.appendChild(grid); // add grid section to game div
 
 gameGrid.forEach(item => {
   const { name, img } = item;
-  // creates card element with name as identifier
-  const card = document.createElement('div');
-  card.classList.add('card');
-  card.dataset.name = name;
+  // creates card div for each item in gameGrid
+  const card = document.createElement('div'); // creates div
+  card.classList.add('card'); // adds class of card to div
+  card.dataset.name = name; // sets data-name attribute to name of the creature
   // sets up front of card
-  const front = document.createElement('div');
-  front.classList.add('front');
+  const front = document.createElement('div'); // create div
+  front.classList.add('front'); // sets class of div to front
   // sets up back of card
   const back = document.createElement('div');
   back.classList.add('back');
-  back.style.backgroundImage = `url(${img})`;
-  // adds new components to grid
+  back.style.backgroundImage = `url(${img})`; // sets image to image in array
+  // adds new div to grid, and front and back to each card
   grid.appendChild(card);
   card.appendChild(front);
   card.appendChild(back);
 });
+
 // if a match is found do this...
 const match = () => {
   const selected =
   document.querySelectorAll('.selected');
   selected.forEach(card => {
-    card.classList.add('match');
+    card.classList.add('match'); // add match class to card
     matchedpairs += 1; // if cards match, add to counter
     if (matchedpairs == 16) { // ie. game complete
       Swal.fire({
@@ -112,30 +115,30 @@ const resetGuesses = () => {
   var selected =
   document.querySelectorAll('.selected');
   selected.forEach(card => {
-    card.classList.remove('selected');
+    card.classList.remove('selected'); // removes selected class from card
   });
 };
- 
 
+// listens for click in grid
 grid.addEventListener('click', event => {
 
-  const clicked = event.target;
+  const clicked = event.target; // event.target is clicked item
 
-  if ( // doesn't allow the same card to be selected
-    clicked.nodeName === 'SECTION' ||
-    clicked === previousTarget ||
-    clicked.parentNode.classList.contains('selected') ||
+  if (
+    clicked.nodeName === 'SECTION' || // cant select grid section itself
+    clicked === previousTarget || // can't select card thats already selected
+    clicked.parentNode.classList.contains('selected') || // can't flip over already matched cards
     clicked.parentNode.classList.contains('match')
   ) {
     return;
   }
-  if ( count < 2 ) {
-    count ++; // increment add
+  if ( count < 2 ) { // only allows two cards to be selected
+    count ++; // increment add 1 to count
     if (count === 1) { // set as first selection
       firstGuess =
       clicked.parentNode.dataset.name;
       console.log(firstGuess);
-      clicked.parentNode.classList.add('selected'); // collates appendChilds as single selection
+      clicked.parentNode.classList.add('selected'); // adds selected class to item
     } else { // set as second collection
       secondGuess =
       clicked.parentNode.dataset.name;
@@ -149,7 +152,7 @@ grid.addEventListener('click', event => {
       }
       setTimeout(resetGuesses, delay); // run resetGuesses if they dont
     }
-    previousTarget = clicked;
+    previousTarget = clicked; // can't click same card twice
   }
 
 
