@@ -15,6 +15,7 @@ body {
 h1 {
   font-family: 'NTR', sans-serif;
   font-size: 55px;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
 }
@@ -22,7 +23,16 @@ h1 {
 p {
   padding: 0;
   margin: 0;
-  line-height: 0.8;
+  line-height: 0.9;
+}
+
+audio {
+  color: #f3deac
+  /* margin-left: 10px;
+  margin-bottom: 10px; */
+  width: 1%;
+  justify-content: : flex-start;
+
 }
 
 #left-side {
@@ -39,16 +49,18 @@ p {
   margin-top: 20px;
   margin-left: 30px;
   width: 530px;
-  padding: 10px;
+  padding: 20px;
   font-family: 'NTR', sans-serif;
   font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
   /* border: 2px solid black; */
 }
 
 .grid {
   max-width: 670px;
   float: right;
-  margin: 20px 100px 0 0;
+  margin: 20px 90px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,4 +117,25 @@ p {
 
 .match .front {
   background: rgba(101, 137, 249, 0) !important;
+}
+
+
+
+#fact {
+  margin-top: 20px;
+  margin-left: 210px;
+  width: 350px;
+  padding: 20px;
+  font-family: 'NTR', sans-serif;
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  /* border: 2px solid black; */
+}
+
+#audio {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.5;
 }
