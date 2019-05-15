@@ -40,7 +40,7 @@ const creatures = [{
 }
 ];
 // random fact generator
-const randomFact = creatures[Math.floor(Math.random() * 7) +1].fact;
+const randomFact = creatures[Math.floor(Math.random() * 8)].fact; // returns index at random number
 document.getElementById("randomFact").innerHTML = randomFact;
 
 // duplicates array and saves it as gameGrid
