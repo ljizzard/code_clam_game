@@ -26,6 +26,15 @@ p {
   line-height: 0.9;
 }
 
+audio {
+  color: #f3deac
+  /* margin-left: 10px;
+  margin-bottom: 10px; */
+  width: 1%;
+  justify-content: : flex-start;
+
+}
+
 #left-side {
   float: left;
 }
