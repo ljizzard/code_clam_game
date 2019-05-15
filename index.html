@@ -8,7 +8,11 @@
   <link rel="icon" href="./img/clam.png" type="image/png" sizes="16x16">
   <title>CodeClam</title>
   <link rel="stylesheet" href="css/fish.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <link href="https://fonts.googleapis.com/css?family=NTR" rel="stylesheet">
+
 </head>
 
 <body>
@@ -20,9 +24,14 @@
         <h1>Instructions</h1>
         <p>Spin the clams two cards at a time. If they match we'll add them to your catch of the day. See if you can catch them all!</p>
       </div>
+      <div id="fact">
+        <p>DID YOU KNOW?...</p>
+        <p id="randomFact">{{randomFact}}</p>
+      </div>
     </div>
 
   <script src="js/script.js"></script>
+
   </div>
 </body>
 
