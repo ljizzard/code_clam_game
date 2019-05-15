@@ -115,6 +115,7 @@ const resetGuesses = () => {
     card.classList.remove('selected');
   });
 };
+ 
 
 grid.addEventListener('click', event => {
 
